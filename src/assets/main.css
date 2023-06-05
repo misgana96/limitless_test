@@ -25,10 +25,11 @@ a,
   body {
     display: flex;
     place-items: center;
+    overflow: scroll;
   }
 
   #app {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
