@@ -1,10 +1,10 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-
+  /* padding: 2rem; */
+  overflow: scroll;
   font-weight: normal;
 }
 
@@ -29,8 +29,8 @@ a,
   }
 
   #app {
-    display: flex;
+    /* display: flex;
     grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    padding: 0 2rem; */
   }
 }

@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- Main navbar -->
-        <div class="navbar navbar-dark navbar-static py-2">
+        <div class="navbar navbar-dark navbar-static py-2 app-bar-default">
             <div class="container-fluid">
                 <div class="navbar-brand">
                     <a href="index.html" class="d-inline-flex align-items-center">
@@ -15,23 +15,23 @@
                         <li class="nav-item">
                             <a href="#" class="navbar-nav-link navbar-nav-link-icon rounded ms-1">
                                 <div class="d-flex align-items-center mx-md-1">
-                                <i class="ph-lifebuoy"></i>
+                                    <PhLifebuoy :size="20"/>
                                 <span class="d-none d-md-inline-block ms-2">Support</span>
                             </div>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="navbar-nav-link navbar-nav-link-icon rounded ms-1">
+                            <a  @click="$router.push('/register')" class="navbar-nav-link navbar-nav-link-icon rounded ms-1">
                                 <div class="d-flex align-items-center mx-md-1">
-                                <i class="ph-user-circle-plus"></i>
+                                    <PhUserCirclePlus :size="20"/>
                                 <span class="d-none d-md-inline-block ms-2">Register</span>
                             </div>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="navbar-nav-link navbar-nav-link-icon rounded ms-1">
+                            <a @click="$router.push('/login')" class="navbar-nav-link navbar-nav-link-icon rounded ms-1">
                                 <div class="d-flex align-items-center mx-md-1">
-                                <i class="ph-user-circle"></i>
+                                    <PhUserCircle :size="20"/>
                                 <span class="d-none d-md-inline-block ms-2">Login</span>
                             </div>
                             </a>
@@ -45,7 +45,7 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue'
-
+import { PhUserCirclePlus } from "@phosphor-icons/vue";
 export default defineComponent({
     data: () => {
         return {
@@ -54,3 +54,9 @@ export default defineComponent({
     }
 })
 </script>
+<style scoped>
+.app-bar-default {
+    position: fixed;
+    width: 100%;
+}
+</style>

@@ -4,7 +4,7 @@
         <div class="content d-flex justify-content-center align-items-center">
 
         <!-- Registration form -->
-        <form class="login-form" action="index.html">
+        <form class="login-form register-form-limitless" action="index.html">
             <div class="card mb-0">
                 <div class="card-body">
                     <div class="text-center mb-3">
@@ -24,10 +24,10 @@
                         <div class="form-control-feedback form-control-feedback-start">
                             <input type="text" class="form-control" placeholder="JohnDoe">
                             <div class="form-control-feedback-icon">
-                                <i class="ph-user-circle text-muted"></i>
+                                <PhUserCircle :size="20"/>
                             </div>
                         </div>
-                        <div class="form-text text-danger"><i class="ph-x-circle me-1"></i> This username is already taken</div>
+                        <div class="form-text text-danger"><PhXClose :size="20"/> This username is already taken</div>
                     </div>
 
                     <div class="mb-3">
@@ -35,7 +35,7 @@
                         <div class="form-control-feedback form-control-feedback-start">
                             <input type="password" class="form-control" placeholder="•••••••••••">
                             <div class="form-control-feedback-icon">
-                                <i class="ph-lock text-muted"></i>
+                                <PhLock :size="20"/>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                         <div class="form-control-feedback form-control-feedback-start">
                             <input type="text" class="form-control" placeholder="john@doe.com">
                             <div class="form-control-feedback-icon">
-                                <i class="ph-at text-muted"></i>
+                                <PhAt :size="20"/>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                         <div class="form-control-feedback form-control-feedback-start">
                             <input type="text" class="form-control" placeholder="john@doe.com">
                             <div class="form-control-feedback-icon">
-                                <i class="ph-at text-muted"></i>
+                                <PhAt :size="20"/>
                             </div>
                         </div>
                     </div>
@@ -105,3 +105,8 @@ export default defineComponent({
     }
 })
 </script>
+<style scoped>
+.register-form-limitless {
+    margin-top: 100px;
+}
+</style>

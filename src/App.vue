@@ -1,10 +1,10 @@
 <script setup lang="ts">
-
+import AppView from '@/components/AppView.vue'
 </script>
 
 <template>
   <main>
-    <router-view/>
+    <AppView/>
   </main>
 </template>
 

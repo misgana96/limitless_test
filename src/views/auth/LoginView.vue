@@ -12,7 +12,7 @@
         <div class="content d-flex justify-content-center align-items-center">
 
             <!-- Login form -->
-            <form class="login-form" action="index.html">
+            <form class="login-form login-form-limitless" action="index.html">
                 <div class="card mb-0">
                     <div class="card-body">
                         <div class="text-center mb-3">
@@ -28,7 +28,7 @@
                             <div class="form-control-feedback form-control-feedback-start">
                                 <input type="text" class="form-control" placeholder="john@doe.com">
                                 <div class="form-control-feedback-icon">
-                                    <i class="ph-user-circle text-muted"></i>
+                                    <PhUserCircle :size="20"/>
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                             <div class="form-control-feedback form-control-feedback-start">
                                 <input type="password" class="form-control" placeholder="•••••••••••">
                                 <div class="form-control-feedback-icon">
-                                    <i class="ph-lock text-muted"></i>
+                                    <PhLock :size="20"/>
                                 </div>
                             </div>
                         </div>
@@ -115,3 +115,8 @@ export default defineComponent({
     }
 })
 </script>
+<style scoped>
+.login-form-limitless {
+    margin-top: 100px;
+}
+</style>
