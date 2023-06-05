@@ -6,6 +6,7 @@
 </template>
 <script lang="ts">
 import AppBar from '@/components/AppBarDefault.vue'
+import { useCounterStore } from '@/stores/counter';
 import { defineComponent } from 'vue';
 export default defineComponent({
     components: {
@@ -15,6 +16,9 @@ export default defineComponent({
         return {
             //
         }
+    },
+    computed: {
+        // ...mapStores(useCounterStore, useCounterStore)
     }
 })
 </script>
