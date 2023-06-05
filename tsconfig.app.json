@@ -5,6 +5,8 @@
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
     "types": [
       "@types/node",
     ],

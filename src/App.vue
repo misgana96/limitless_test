@@ -4,6 +4,18 @@ import AppView from '@/components/AppView.vue'
 
 <template>
   <main>
+    <notifications position="bottom center" width="250">
+      <template #body="props">
+        <div v-show="props.item.type ==='success' " class="my-notification success">
+          <div  class="error-text" v-html="props.item.text"/>
+          <!-- <button class="close-btn" ><font-awesome-icon icon="fa-xmark" size="lg"/></button> -->
+        </div>
+        <div v-show="props.item.type ==='error' " class="my-notification error">
+          <div  class="error-text" v-html="props.item.text"/>
+          <!-- <button class="close-btn"><font-awesome-icon icon="fa-xmark" size="lg"/></button> -->
+        </div>
+      </template>
+    </notifications>
     <AppView/>
   </main>
 </template>

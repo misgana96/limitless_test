@@ -69,29 +69,41 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import {authservice, UserEntity} from '@/api'
+// import { useNotification } from "@kyvg/vue3-notification";
 
 export default defineComponent({
     name: 'LoginView',
     data: () => {
         return {
-            userEntity: new UserEntity
+            userEntity: new UserEntity,
         }
     },
-    setup () {
-        //
-    },
+    // setup () {
+    //     const { notify}  = new useNotification()
+
+    //     return {
+    //         notify
+    //     }
+    // },
     methods: {
-        login () {
-            console.log('heyyy')
+        async login () {
             try {
-                authservice.login({
+                const response = await authservice.login({
                     email: this.userEntity.email,
                     password: this.userEntity.password
-                }).then ((res) => {
-                    this.$router.push('/dashboard')
                 })
-            } catch (err) {
-                throw new Error('unable to login')
+
+                if (response) {
+                    this.$router.push('/dashboard')
+                }
+            } catch (err:any) {
+                const id = Date.now()
+                this.$notify({
+                        id,
+                        type: 'error',
+                        duration: 10000,
+                        text: 'err.response.message'
+                    })
             }
         }
     }
