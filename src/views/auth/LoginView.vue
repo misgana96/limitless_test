@@ -48,6 +48,12 @@
                         </div>
 
                         <div class="text-center">
+                            <p >SignIn with Google</p>
+                            <div>
+                                <img @click="socialLogin" class="social-login" src="../../assets/download.jpeg" width="100"/>
+                            </div>
+                        </div>
+                        <div class="text-center">
                             <a href="login_password_recover.html">Forgot password?</a>
                         </div>
                     </div>
@@ -70,6 +76,9 @@
 import { defineComponent } from 'vue';
 import {authservice, UserEntity} from '@/api'
 import {useCounterStore} from '@/stores/counter'
+import { signInWithPopup } from 'firebase/auth';
+import { auth, socialAuth } from '@/plugins/firebase';
+
 
 export default defineComponent({
     name: 'LoginView',
@@ -79,10 +88,10 @@ export default defineComponent({
         }
     },
     // setup () {
-    //     const { notify}  = new useNotification()
+    //     const socialAuth  = new auth()
 
     //     return {
-    //         notify
+    //         auth
     //     }
     // },
     methods: {
@@ -110,6 +119,19 @@ export default defineComponent({
                         text: 'err.response.message'
                     })
             }
+        },
+        socialLogin () {
+            signInWithPopup(auth, socialAuth).then((result:any) => {
+                this.$router.push('/dashboard')
+            }).catch((err:any) => {
+                const id = Date.now()
+                this.$notify({
+                    id,
+                    type: 'error',
+                    duration: 10000,
+                    text: 'Oops, Unable to login'
+                })
+            })
         }
     }
 })
@@ -117,5 +139,10 @@ export default defineComponent({
 <style scoped>
 .login-form-limitless {
     margin-top: 100px;
+}
+.social-login {
+    background-color: #fff;
+    margin: 20px 0;
+    cursor: pointer;
 }
 </style>

@@ -6,8 +6,14 @@ declare module '*.vue' {
   }
 
 
-// declare module '@kyvg/vue3-notification' {
-//     import type {DefineComponent} from 'vue'
-//     const component : DefineComponent <{}, {}, any>
-//     export default component
-//   }
+declare module 'vite-plugin-checker' {
+    import type {DefineComponent} from 'vue'
+    const component : DefineComponent <{}, {}, any>
+    export default component
+  }
+
+  // declare module 'firebase' {
+  //   import type {DefineComponent} from 'vue'
+  //   const component : DefineComponent <{}, {}, any>
+  //   export default component
+  // }

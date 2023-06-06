@@ -41,7 +41,7 @@
 							<div class="col">
 								<button type="button" class="dropdown-item text-wrap h-100 align-items-start border-end-sm border-bottom p-3">
 									<div>
-										<img src="../../../assets/images/demo/logos/1.svg" class="h-40px mb-2" alt="">
+										<!-- <img src="../../../assets/images/demo/logos/1.svg" class="h-40px mb-2" alt=""> -->
 										<div class="fw-semibold my-1">Customer data platform</div>
 										<div class="text-muted">Unify customer data from multiple sources</div>
 									</div>
@@ -51,7 +51,7 @@
 							<div class="col">
 								<button type="button" class="dropdown-item text-wrap h-100 align-items-start border-bottom p-3">
 									<div>
-										<img src="../../../assets/images/demo/logos/2.svg" class="h-40px mb-2" alt="">
+										<!-- <img src="../../../assets/images/demo/logos/2.svg" class="h-40px mb-2" alt=""> -->
 										<div class="fw-semibold my-1">Data catalog</div>
 										<div class="text-muted">Discover, inventory, and organize data assets</div>
 									</div>
@@ -61,7 +61,7 @@
 							<div class="col">
 								<button type="button" class="dropdown-item text-wrap h-100 align-items-start border-end-sm border-bottom border-bottom-sm-0 rounded-bottom-start p-3">
 									<div>
-										<img src="../../../assets/images/demo/logos/3.svg" class="h-40px mb-2" alt="">
+										<!-- <img src="../../../assets/images/demo/logos/3.svg" class="h-40px mb-2" alt=""> -->
 										<div class="fw-semibold my-1">Data governance</div>
 										<div class="text-muted">The collaboration hub and data marketplace</div>
 									</div>
@@ -71,7 +71,7 @@
 							<div class="col">
 								<button type="button" class="dropdown-item text-wrap h-100 align-items-start rounded-bottom-end p-3">
 									<div>
-										<img src="../../../assets/images/demo/logos/4.svg" class="h-40px mb-2" alt="">
+										<!-- <img src="../../../assets/images/demo/logos/4.svg" class="h-40px mb-2" alt=""> -->
 										<div class="fw-semibold my-1">Data privacy</div>
 										<div class="text-muted">Automated provisioning of non-production datasets</div>
 									</div>
@@ -115,7 +115,7 @@
 						<div class="dropdown-menu-scrollable pb-2">
 							<a href="#" class="dropdown-item align-items-start text-wrap py-2">
 								<div class="status-indicator-container me-3">
-									<img src="../../../assets/images/demo/users/face10.jpg" class="w-40px h-40px rounded-pill" alt="">
+									<!-- <img src="../../../assets/images/demo/users/face10.jpg" class="w-40px h-40px rounded-pill" alt=""> -->
 									<span class="status-indicator bg-warning"></span>
 								</div>
 
@@ -128,7 +128,7 @@
 
 							<a href="#" class="dropdown-item align-items-start text-wrap py-2">
 								<div class="status-indicator-container me-3">
-									<img src="../../../assets/images/demo/users/face3.jpg" class="w-40px h-40px rounded-pill" alt="">
+									<!-- <img src="../../../assets/images/demo/users/face3.jpg" class="w-40px h-40px rounded-pill" alt=""> -->
 									<span class="status-indicator bg-success"></span>
 								</div>
 
@@ -141,7 +141,7 @@
 
 							<a href="#" class="dropdown-item align-items-start text-wrap py-2">
 								<div class="status-indicator-container me-3">
-									<img src="../../../assets/images/demo/users/face24.jpg" class="w-40px h-40px rounded-pill" alt="">
+									<!-- <img src="../../../assets/images/demo/users/face24.jpg" class="w-40px h-40px rounded-pill" alt=""> -->
 									<span class="status-indicator bg-success"></span>
 								</div>
 								<div class="flex-1">
@@ -153,7 +153,7 @@
 
 							<a href="#" class="dropdown-item align-items-start text-wrap py-2">
 								<div class="status-indicator-container me-3">
-									<img src="../../../assets/images/demo/users/face4.jpg" class="w-40px h-40px rounded-pill" alt="">
+									<!-- <img src="../../../assets/images/demo/users/face4.jpg" class="w-40px h-40px rounded-pill" alt=""> -->
 									<span class="status-indicator bg-grey"></span>
 								</div>
 								<div class="flex-1">
@@ -165,7 +165,7 @@
 
 							<a href="#" class="dropdown-item align-items-start text-wrap py-2">
 								<div class="status-indicator-container me-3">
-									<img src="../../../assets/images/demo/users/face25.jpg" class="w-40px h-40px rounded-pill" alt="">
+									<!-- <img src="../../../assets/images/demo/users/face25.jpg" class="w-40px h-40px rounded-pill" alt=""> -->
 									<span class="status-indicator bg-danger"></span>
 								</div>
 								<div class="flex-1">
@@ -219,7 +219,7 @@
 
 								<div class="dropdown-item cursor-pointer">
 									<div class="me-3">
-										<img src="../../../assets/images/demo/users/face3.jpg" class="w-32px h-32px rounded-pill" alt="">
+										<!-- <img src="../../../assets/images/demo/users/face3.jpg" class="w-32px h-32px rounded-pill" alt=""> -->
 									</div>
 
 									<div class="d-flex flex-column flex-grow-1">
@@ -236,7 +236,7 @@
 
 								<div class="dropdown-item cursor-pointer">
 									<div class="me-3">
-										<img src="../../../assets/images/demo/users/face24.jpg" class="w-32px h-32px rounded-pill" alt="">
+										<!-- <img src="../../../assets/images/demo/users/face24.jpg" class="w-32px h-32px rounded-pill" alt=""> -->
 									</div>
 
 									<div class="d-flex flex-column flex-grow-1">
@@ -263,7 +263,7 @@
 
 								<div class="dropdown-item cursor-pointer">
 									<div class="me-3">
-										<img src="../../../assets/images/brands/adobe.svg" class="w-32px h-32px rounded-pill" alt="">
+										<!-- <img src="../../../assets/images/brands/adobe.svg" class="w-32px h-32px rounded-pill" alt=""> -->
 									</div>
 
 									<div class="d-flex flex-column flex-grow-1">
@@ -280,7 +280,7 @@
 
 								<div class="dropdown-item cursor-pointer">
 									<div class="me-3">
-										<img src="../../../assets/images/brands/holiday-inn.svg" class="w-32px h-32px rounded-pill" alt="">
+										<!-- <img src="../../../assets/images/brands/holiday-inn.svg" class="w-32px h-32px rounded-pill" alt=""> -->
 									</div>
 
 									<div class="d-flex flex-column flex-grow-1">
@@ -297,7 +297,7 @@
 
 								<div class="dropdown-item cursor-pointer">
 									<div class="me-3">
-										<img src="../../../assets/images/brands/ing.svg" class="w-32px h-32px rounded-pill" alt="">
+										<!-- <img src="../../../assets/images/brands/ing.svg" class="w-32px h-32px rounded-pill" alt=""> -->
 									</div>
 
 									<div class="d-flex flex-column flex-grow-1">
@@ -435,7 +435,7 @@
 	</div>
     </div>
 </template>
-<script>
+<script lang="ts">
 import {defineComponent} from 'vue'
 export default defineComponent({
     data: () => {

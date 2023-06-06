@@ -12,6 +12,7 @@ import PhosphorIcons from "@phosphor-icons/vue"
 import router from './router'
 import { createPinia } from 'pinia'
 import App from '@/App.vue'
+// import firebase from "firebase"
 
 const pinia = createPinia()
 library.add(faCircleUser)
