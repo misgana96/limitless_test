@@ -124,6 +124,10 @@ export default defineComponent({
                 const response = await authservice.register(this.userEntity)
                 console.log(response.metadata)
                 useCounterStore().isLoggedIn = true
+
+                localStorage.setItem("email", this.userEntity.email as any)
+                localStorage.setItem("name", this.userEntity.name as any)
+                localStorage.setItem("phone", this.userEntity.phone as any)
                 if (response) {
                     this.$router.push('/dashboard')
                 }

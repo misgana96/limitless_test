@@ -101,6 +101,9 @@ export default defineComponent({
                     email: this.userEntity.email,
                     password: this.userEntity.password
                 })
+                localStorage.setItem("email", response.user.email as any)
+                localStorage.setItem("name", response.user.displayName as any)
+                localStorage.setItem("data", response.user.metadata as any)
                 useCounterStore().isLoggedIn = true
                 this.$router.push('/dashboard')
                 const id = Date.now()
@@ -122,6 +125,9 @@ export default defineComponent({
         },
         socialLogin () {
             signInWithPopup(auth, socialAuth).then((result:any) => {
+                let token = result.credential.accessToken;
+                let user = result.user
+                localStorage.setItem("user", user)
                 this.$router.push('/dashboard')
             }).catch((err:any) => {
                 const id = Date.now()
