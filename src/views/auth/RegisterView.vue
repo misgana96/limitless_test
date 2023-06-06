@@ -27,7 +27,6 @@
                                 <PhUserCircle :size="20"/>
                             </div>
                         </div>
-                        <div class="form-text text-danger"><PhXClose :size="20"/> This username is already taken</div>
                     </div>
 
                     <div class="mb-3">
@@ -38,7 +37,6 @@
                                 <PhPhone :size="20"/>
                             </div>
                         </div>
-                        <div class="form-text text-danger"><PhXClose :size="20"/> This username is already taken</div>
                     </div>
 
                     <div class="mb-3">
