@@ -1,21 +1,32 @@
 <template>
     <div>
-        <AppBarDefault v-if="!useStore.isLoggedIn" />
-        <div v-else>
-            <AppBar />
+        <div v-if="!useStore.isLoggedIn">
+            <AppBarDefault  />
+            <router-view></router-view>
         </div>
-        <router-view></router-view>
+        <div v-else>
+            <div class="flex-view">
+                <AppBar />
+                <div class="flex-main">
+                    <SideBar />
+                    <router-view></router-view>
+                </div>
+            </div>
+        </div>
+
     </div>
 </template>
 <script lang="ts">
 import AppBarDefault from '@/components/AppBarDefault.vue'
 import AppBar from '@/components/AppBar.vue'
+import SideBar from '@/components/AppSideBar.vue'
 import { useCounterStore } from '@/stores/counter';
 import { defineComponent } from 'vue';
 export default defineComponent({
     components: {
         AppBarDefault,
-        AppBar
+        AppBar,
+        SideBar
     },
     data: () => {
         return {
@@ -34,3 +45,10 @@ export default defineComponent({
     }
 })
 </script>
+
+<style scoped>
+.flex-main {
+    display: flex;
+    flex-direction: row;
+}
+</style>

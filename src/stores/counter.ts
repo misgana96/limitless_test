@@ -1,6 +1,7 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
+import {UserEntity} from '@/api'
 
 export const useCounterStore = defineStore('counter', () => {
   const count = ref(0)
@@ -10,13 +11,24 @@ export const useCounterStore = defineStore('counter', () => {
     count.value++
   }
 
-  state: () => {
-    return {
-      loggedIn: false,
-      user: null
-    }
-  }
+  const loggedIn = ref(false)
+  const user = ref(null)
 
+  const getLoggedIn = computed(() => {
+    return loggedIn.value
+  })
+
+  const getUsers = computed(() => {
+    return user.value
+  })
+
+  
+  // function register (data: UserEntity) {
+  //   const response = await createUserWithEmailAndPassword(auth, data.email as any, data.password as any)
+  //   if (response) {
+
+  //   }
+  // }
   // actions: {
   //   async register(context, { email, phone, password, username}) {
 
