@@ -44,7 +44,7 @@
                     <div class="mb-3">
                         <label class="form-label">Password</label>
                         <div class="form-control-feedback form-control-feedback-start">
-                            <input userEntity.password type="password" class="form-control" placeholder="•••••••••••">
+                            <input v-model="userEntity.password" type="password" class="form-control" placeholder="•••••••••••">
                             <div class="form-control-feedback-icon">
                                 <PhLock :size="20"/>
                             </div>
@@ -107,6 +107,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import {authservice, UserEntity} from '@/api'
+import {useCounterStore} from '@/stores/counter'
 export default defineComponent({
     name: 'RegisterView',
     data: () => {
@@ -118,10 +119,30 @@ export default defineComponent({
         //
     },
     methods: {
-        register () {
-            const response = authservice.register(this.userEntity)
-            this.$router.push('/dashboard')
-            console.log(response)
+        async register () {
+            try {
+                const response = await authservice.register(this.userEntity)
+                console.log(response.metadata)
+                useCounterStore().isLoggedIn = true
+                if (response) {
+                    this.$router.push('/dashboard')
+                }
+                const id = Date.now()
+                this.$notify({
+                        id,
+                        type: 'success',
+                        duration: 10000,
+                        text: 'Successfuly Registered'
+                    })
+            } catch (err) {
+                const id = Date.now()
+                this.$notify({
+                    id,
+                    type: 'error',
+                    duration: 10000,
+                    text: "err.response.message"
+                })
+            }
         }
     }
 })

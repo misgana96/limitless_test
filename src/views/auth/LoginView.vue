@@ -69,7 +69,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import {authservice, UserEntity} from '@/api'
-// import { useNotification } from "@kyvg/vue3-notification";
+import {useCounterStore} from '@/stores/counter'
 
 export default defineComponent({
     name: 'LoginView',
@@ -92,10 +92,15 @@ export default defineComponent({
                     email: this.userEntity.email,
                     password: this.userEntity.password
                 })
-
-                if (response) {
-                    this.$router.push('/dashboard')
-                }
+                useCounterStore().isLoggedIn = true
+                this.$router.push('/dashboard')
+                const id = Date.now()
+                this.$notify({
+                        id,
+                        type: 'success',
+                        duration: 10000,
+                        text: 'Successfuly logged in'
+                    })
             } catch (err:any) {
                 const id = Date.now()
                 this.$notify({

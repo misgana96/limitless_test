@@ -5,6 +5,7 @@ import {auth} from '@/plugins/firebase'
 
 class AuthApi {
     async register (data: UserEntity) {
+        console.log(data)
         const response = await createUserWithEmailAndPassword(auth, data.email as any, data.password as any)
          if (response) {
             return response.user

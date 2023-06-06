@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import appviewdefault from '@/components/AppBarDefault.vue'
 import appview from '@/components/AppView.vue'
-import dashboard from '@/views/dashboard'
+import dashboard from '@/views/dashboard/DashboardView.vue'
 import login from '@/views/auth/LoginView.vue'
 import register from '@/views/auth/RegisterView.vue'
 import {useCounterStore} from '@/stores/counter'
@@ -22,6 +22,11 @@ const routes = [
                 component: dashboard
             }
         ]
+    },
+    {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: dashboard
     },
     {
         path: '/',
